@@ -1,207 +1,199 @@
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
-
-body {
-	background-color: rgba(218, 63, 148, 0.452);
-	font-family: 'Open Sans', sans-serif;
-}
-
-.logo{
-    height: 100px;
-}
-
-.contenedor {
-	width: 90%;
-	margin: auto;
-}
-
-header {
-	padding: 10px 0;
-}
-
-header .contenedor {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-header nav a {
-	color: rgb(0, 0, 0);
-	text-decoration: none;
-	margin-right: 20px;
-}
-
-header nav a:hover,
-header nav a.activo {
-	color: rgba(199, 93, 151, 0.548);
-}
-
-
-.imagen-principal {
-	font-size: 16px;
-	min-height: 40.62em;
-	color: #fff;
-	background: linear-gradient(rgba(0, 0, 0, 0.699) 0%, rgba(0, 0, 0, 0.699) 100%), url(fondo.jpg);
-	background-position: center center;
-	background-size: cover;
-	margin-bottom: 3.12em;
-	display: flex;
-	align-items: end;
-}
-
-.imagen-principal .contenedor {
-	margin: 0 auto;
-	margin-bottom: 6.25em;
-}
-
-
-
-@media screen and (max-width: 800px) {
-	header .logotipo {
-		margin-bottom: 10px;
-		font-size: 30px;
-	}
-
-	header .contenedor {
-		flex-direction: column;
-		text-align: center;
-	}
-
-	.imagen-principal {
-		font-size: 20px;
-	}
-
-	.imagen-principal .descripcion {
-		max-width: 100%;
-	}
-}
-
-
-h2 {
-    color:rgb(255, 255, 255);
-    font-weight:bold;
-	font-size: 4em;
-	margin: 20px 10px;
-}
-h3 {
-    color:rgb(255, 255, 255);
-    text-align: justify;
-    font-weight:bold;
-	font-size: 3em;
-	margin: 20px 10px;
-	border-bottom: 2px solid #ad9fee;
-}
-h4 {
-    color:rgb(255, 255, 255);
-    text-align: justify;
-    font-weight:bold;
-	font-size: 2em;
-	margin: 20px 10px;
-}
-p {
-    color:rgb(255, 255, 255);
-    text-align:center;
-    padding: 10px;
-    font-weight: normal;
-	font-size: 1em;
-	margin: 20px 10px;
-}
-
-
-
-section nav a {
-	color: #AAA;
-	text-decoration: none;
-	margin-right: 20px;
-    font-weight: normal;
-	font-size: 1em;
-	margin: 20px 10px;
-}
-
-ul li {
-  color: rgb(255, 255, 255);
-  text-align: justify;
-  padding: 10px;
-  font-weight: normal;
-  font-size: 1em;
-  margin: 60px, 10px;
-}
-
-ul li a:hover,
-ul li a.activo {
-	color: rgb(124, 53, 255);
-}
-
-.mw-headline {
-	color:rgba(166, 160, 216, 0.959)
-}
-
-/*:::::Pie de Pagina*/
-.pie-pagina{
-    width: 100%;
-    background-color: #080808;
-}
-.pie-pagina .grupo-1{
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap:50px;
-    padding: 45px 0px;
-}
-.pie-pagina .grupo-1 .box figure{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.pie-pagina .grupo-1 .box figure img{
-    width: 250px;
-}
-.pie-pagina .grupo-1 .box h2{
-    color: #fff;
-    margin-bottom: 25px;
-    font-size: 20px;
-}
-.pie-pagina .grupo-1 .box p{
-    color: #efefef;
-    margin-bottom: 10px;
-}
-.pie-pagina .grupo-1 .red-social a{
-    display: inline-block;
+*{
+    margin: 0;
+    padding: 0;
     text-decoration: none;
-    width: 45px;
-    height: 45px;
-    line-height: 45px;
-    color: #fff;
-    margin-right: 10px;
-    background-color: #3b4161;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-family: 'Patrick Hand', cursive;
+}
+body{
+    background-image: url(https://img.freepik.com/foto-gratis/vintage-cubiertos-rusticos-viejos-oscuro_1220-4886.jpg?t=st=1651721799~exp=1651722399~hmac=ed74a770deafe7f469c16ce52d91e93621c939aa4afdfb054569fce21774e734&w=1380);
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+}
+nav {
+    position: fixed;
+    height: 80px;
+    overflow: hidden;
+    top: 0;
+    display: flex;
+    align-items: center;
+    background: rgba(15, 19, 59, 0.61);
+    width: 100%;
+    z-index: 1;
+}
+.logo{
+    background: url(https://i0.wp.com/images-prod.healthline.com/hlcmsresource/images/topic_centers/2018-8/8807-Spotlight_Restaurant-400x400-icon1.png?w=315&h=840) no-repeat 50% 50%;
+    background-size: contain;
+    margin-left: 50px;
+    width: 10%;
+    height: 80%;
+    float: left;
+}
+.btn {
+    display: none;
+    position: absolute;
+    right: 20px;
+}
+.btn:hover > span {
+    background-color: #b66129;
+}
+.btn span {
+    display: block;
+    margin: 6px;
+    width: 40px;
+    height: 3px;
+    background: rgb(206, 99, 12);
+}
+.menu{
+    position: absolute;
+    right: 20px;
+}
+.menu a{
+    color: #333;
+    text-decoration: none;
+    font-weight: 700;
+    margin-left: 20px;
+    transition: color 0.3s;
+    text-transform: uppercase;
+}
+
+.buscar .titulo{
+    font-family: 'Merriweather Sans', sans-serif;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 40px;
+    color: white;
     text-align: center;
-    transition: all 300ms ease;
+    margin-bottom: 50px;
 }
-.pie-pagina .grupo-1 .red-social a:hover{
-    color: rgb(176, 163, 235);
-}
-.pie-pagina .grupo-2{
-    background-color: #3b4161;
-    padding: 15px 10px;
+.buscar h3{
+    color: white;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 30px;
     text-align: center;
-    color: #fff;
 }
-.pie-pagina .grupo-2 small{
-    font-size: 15px;
+.buscar input[type="search"]{
+    border-radius: 40px;
+    border: none;
+    width: 70%;
+    font-size: 20px;
+    padding: 25px;
 }
-@media screen and (max-width:800px){
-    .pie-pagina .grupo-1{
-        width: 90%;
-        grid-template-columns: repeat(1, 1fr);
-        grid-gap:30px;
-        padding: 35px 0px;
+.buscar input[type="search"]:hover{
+    border: none;
+}
+.buscar input[type="submit"]{
+    background-color: #441522;
+    color: white;
+    border: none;
+    padding: 15px 50px 15px 50px;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 25px;
+    margin-left: 20px;
+    border-radius: 50px;
+}
+.buscar{
+    position: static;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+    margin-top: 15%;
+    margin-bottom: 20%;
+}
+.redes {
+    float: right;
+    transform: translateY(-25px);
+    padding: 0px 10px 0px;
+    color: white;
+    font-size: 20px;
+  }
+  
+  .redes a:hover {
+    color: rgb(137, 34, 34);
+  }
+  .sociales {
+    float: unset;
+    position: fixed;
+    top: 40%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  
+  .sociales a {
+    display: block;
+    text-align: center;
+    padding: 6px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 30px;
+  }
+  
+  .sociales a:hover {
+    background-color: black;
+    background-image: none;
+  }
+  
+  .facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  
+  .instagram {
+    background-image: linear-gradient(rgb(168, 0, 214), red, yellow);
+    color: white;
+  }
+  
+  .youtube {
+    background: #bb0000;
+    color: white;
+  }
+  .whatsapp{
+      background: greenyellow;
+      color: white;
+  }
+@media only screen and (max-width: 650px){
+    .logo{
+        margin-left: 40px;
+        width: 40%;
+        height: 50%;
+    }
+    .buscar .titulo{
+        margin-top: 200px;
+        font-size: 20px;
+    }
+    .buscar h3{
+        font-size: 40px;
+    }
+    .btn {
+        display: block;
+        cursor: pointer;
+    }
+    nav {
+        overflow: visible;
+    }
+    .menu {
+        width: 100%;
+        right: 0;
+        top: 80px;
+        background: #f1f1f1E6;
+        overflow: hidden;
+        max-height: 0;
+    }
+    .menu a{
+        display: block;
+        text-align: center;
+        padding: 10px;
+        margin: 0;
+    }
+    .show {
+        max-height: 200px;
     }
 }

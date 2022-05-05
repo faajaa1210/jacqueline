@@ -1,39 +1,69 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Restaurant Benja</title>
 	<link rel="stylesheet" href="estilo.css">
-    <script src="espacio.png" crossorigin="fondo"></script>
-	<title>Cosmetic</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
 </head>
 <body>
-	<header>
-		<div class="contenedor">
-			<h2 class="logotipo">
-               <img src="espacio.png" alt="" class="logo"> 
-            </h2>
-			<nav>
-				<a href="#inicio">INICIO</a>
-				<a href="Productos.html">PRODUCTOS</a>
-				<a href="sucursales.html">SUCURSALES</a>
-				<a href="registro.html">REGISTRARSE</a>
-			</nav>
+	<nav>
+		<div class="logo"></div>
+		<a class="btn">
+			<span></span>
+			<span></span>
+			<span></span>
+		</a>
+		<div class="menu">
+			<a href="#inicio">Inicio</a>
+			<a href="productos.html">pedidos</a>
+			<a href="#sucursales">Sucursales</a>
+			<a href="registro.html" > Registrate</a>
 		</div>
-	</header>
+	</nav>
+    <section class="buscar">
+        <div class="titulo">
+            <h2>RESTAURANT BENJA</h2>
+        </div>
+        <div class="barra">
+            <h3>NO OLVIDES REGISTRARTE</h3>
+            <br>
+            <form>
+                <input type="search"placeholder="Ej.postres,cenas,almuersos.etc ">
+                <input type="submit" value="Buscar">
+            </form>
+        </div>
+    </section>
+	<footer>
+            <div class="creditos">
+                <p>Benja  2022-2025 Izi Fabian H Parra</p>
+            </div>
+            <div class="redes">
+                <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a> 
+                <a href="https://twitter.com/"><i class="fa fa-twitter"></i></a> 
+                <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.youtube.com/"><i class="fa fa-youtube"></i></a> 
+				<a href="https://www.whatsapp.com/"><i class="fa fa-whatsapp"></i></a>
+            </div>
+            <br>
+        </div>
+        <div class="sociales">
+            <a href="https://www.facebook.com/" class="facebook"><i class="fa fa-facebook"></i></a> 
+            <a href="https://twitter.com/" class="twitter"><i class="fa fa-twitter"></i></a> 
+            <a href="https://www.instagram.com/" class="instagram"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.youtube.com/" class="youtube"><i class="fa fa-youtube"></i></a> 
+			<a href="https://www.whatsapp.com/" class="whatsapp"><i class="fa fa-whatsapp"></i></a>
+        </div>
+    </footer>
 
-	<main>
-		<div class="imagen-principal">
-			<div class="contenedor">
-                <div class="buscador">
-                <p>
-                    <input type="search" name="busqueda">
-                    <input type="submit" value="Buscar">
-                </p>
-                </div>
-			</div>
-		</div>
-	</main>
-        
+<script type="text/javascript">
+    $(".btn").on("click", function(){
+        $('.menu').toggleClass("show");
+    });
+</script>
+</body>
+</html>
